@@ -14,7 +14,7 @@ Using backpropagation and gradient descent to train a neural networks. Build a n
 ![image](https://github.com/jason971019/Neural-network-training-process/blob/master/Layer%20function.png)
 #### Gradient descent
 ![image](https://github.com/jason971019/Neural-network-training-process/blob/master/Gradient%20descent.png)
-#### Result
+#### Results
 - iteration = 500
 ![image](https://github.com/jason971019/Neural-network-training-process/blob/master/500.png)
 - iteration = 1000
