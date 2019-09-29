@@ -57,7 +57,7 @@ def loss_For(y,y_pred):
 #### Gradient descent
 ![image](https://github.com/jason971019/Neural-network-training-process/blob/master/Gradient%20descent.png)
 ## Results
-- iteration = 500
+- iteration = 500  
 ![image](https://github.com/jason971019/Neural-network-training-process/blob/master/500.png)
-- iteration = 1000
+- iteration = 1000  
 ![image](https://github.com/jason971019/Neural-network-training-process/blob/master/1000.png)
