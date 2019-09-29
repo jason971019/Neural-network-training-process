@@ -10,6 +10,7 @@ Using backpropagation and gradient descent to train a neural networks. Build a n
 - Inner-Product (Output Layer)：由已知傳遞到該層的梯度 (dEdy)，透過 chain rule 運算得到 dEdx、dEdW、dEdb
 - Activation Function (Hidden Layer)：保留已知傳遞到該層的梯度 (dEdy) 中大於 0 的值，小於 0 的值則指定為 0。
 - Inner-Product (Hidden Layer)：由已知傳遞到該層的梯度 (dEdy)，透過 chain rule 運算得到 dEdx、dEdW、dEdb
+## Code
 #### Layer functions
 ```Python
 # ## layer definition
@@ -55,7 +56,7 @@ def loss_For(y,y_pred):
 ```
 #### Gradient descent
 ![image](https://github.com/jason971019/Neural-network-training-process/blob/master/Gradient%20descent.png)
-#### Results
+## Results
 - iteration = 500
 ![image](https://github.com/jason971019/Neural-network-training-process/blob/master/500.png)
 - iteration = 1000
