@@ -11,7 +11,48 @@ Using backpropagation and gradient descent to train a neural networks. Build a n
 - Activation Function (Hidden Layer)：保留已知傳遞到該層的梯度 (dEdy) 中大於 0 的值，小於 0 的值則指定為 0。
 - Inner-Product (Hidden Layer)：由已知傳遞到該層的梯度 (dEdy)，透過 chain rule 運算得到 dEdx、dEdW、dEdb
 #### Layer functions
-![image](https://github.com/jason971019/Neural-network-training-process/blob/master/Layer%20function.png)
+```Python
+# ## layer definition
+ 
+def InnerProduct_For(x,W,b):
+    y = np.dot(x,W)+b
+    return y
+
+def InnerProduct_Back(dEdy,x,W,b):
+    dEdx = np.dot(dEdy,W.T)
+    dEdW = np.dot(dEdy.T,x)
+    dEdb = np.dot(np.ones([1,48000]),dEdy)
+    return dEdx,dEdW,dEdb
+
+def Softmax_For(x):
+    softmax = (np.exp(x).T/np.sum(np.exp(x),axis=1).T).T
+    return softmax
+
+def Softmax_Back(y,t):
+    dEdx = y-t
+    return dEdx
+
+def Sigmoid_For(x):
+    y = 1/(1+np.exp(-x))
+    return y
+
+def Sigmoid_Back(dEdy,x):
+    dEdx = np.dot(dEdy.T,np.exp(-x)/pow(1+np.exp(-x),2))
+    return dEdx
+
+def ReLu_For(x):
+    y = np.maximum(x,0)
+    return y
+
+def ReLu_Back(dEdy,x):
+    x = np.int64(x>0)
+    dEdx = dEdy*x
+    return dEdx
+
+def loss_For(y,y_pred):
+    loss = np.square(pow(y-y_pred,2))
+    return loss
+```
 #### Gradient descent
 ![image](https://github.com/jason971019/Neural-network-training-process/blob/master/Gradient%20descent.png)
 #### Results
